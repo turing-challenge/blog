@@ -1,0 +1,5 @@
+baseURL = "https://blog.turingchallenge.com/"
+languageCode = "es-es"
+title = "Turing Challenge - Blog"
+
+theme = "story"
