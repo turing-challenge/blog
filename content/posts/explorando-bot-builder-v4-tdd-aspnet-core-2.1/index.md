@@ -1,13 +1,16 @@
 ---
 title: "Explorando el Bot Builder SDK v4 con TDD en ASP.NET Core 2.1"
-date: 2018-10-27T19:52:50+01:00
+date: 2018-11-18
 draft: true
+image: /posts/explorando-bot-builder-v4-tdd-aspnet-core-2.1/dominik-scythe-414905-unsplash.jpg
+credit: https://unsplash.com/photos/Sot0f3hQQ4Y
+author: "Miguel Veloso"
 ---
-En este artículo, o más bien tutorial, vamos a desarrollar una pequeña aplicación tipo TO-DO list, muy sencilla, en ASP\.NET Core 2.1 con el Bot Builder v4, aplicando el proceso de desarrollo TDD (Test Driven Development).
+En este artículo/tutorial, vamos a desarrollar una pequeña aplicación tipo TO-DO list, muy sencilla, en ASP\.NET Core 2.1 con el [Bot Builder SDK v4](https://github.com/Microsoft/botbuilder-dotnet), aplicando el proceso de desarrollo TDD (Test Driven Development).
 
 Vamos a usar un enfoque TDD de "alto nivel", más cercano a las pruebas de aceptación que a las pruebas unitarias que se suelen usar de ejemplo, con lo que tendremos otra visión de las pruebas. Por otro lado tampoco empezamos desde cero, sino desde un proyecto inicial que funciona, al que agregaremos las pruebas.
 
-Este enfoque podría parecer poco adecuado para TDD, viéndolo desde un punto de vista estricto, pero me parece que de esta forma se logra un buen balance entre lo práctico y lo efectivo.
+Este enfoque a lo mejor podría parecer poco adecuado para TDD, pero me parece que así se logra un buen balance entre lo práctico y lo efectivo.
 
 ## 1 - Introducción
 

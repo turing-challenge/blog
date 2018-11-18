@@ -31,8 +31,7 @@ table.lntable tr > td.lntd:last-child pre.chroma {
     border-left-style: none;
 }
 
-h5,
-.sans-serif {
+h5 {
   font-family: 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   font-size: 1.2rem;
 }
