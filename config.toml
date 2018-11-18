@@ -3,3 +3,10 @@ languageCode = "es-es"
 title = "Turing Challenge - Blog"
 
 theme = "story"
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML", "JSON"]

@@ -1,0 +1,39 @@
+.measure-wide {
+    max-width: 48em;
+}
+
+p > code, li > code, a > code, td > code {
+    font-size: 90%;
+}
+
+pre {
+    border: 1px solid #dfe2e5;
+    border-radius: 4px;
+    line-height: 1.3;
+    background: #f6f8fa !important;
+}
+
+body table.lntable {
+    font-size: 100%;
+}
+
+table.lntable tr > td.lntd:first-child pre.chroma {
+    padding-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-style: none;
+}
+
+table.lntable tr > td.lntd:last-child pre.chroma {
+    padding-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-style: none;
+}
+
+h5,
+.sans-serif {
+  font-family: 'Quattrocento Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  font-size: 1.2rem;
+}
+
