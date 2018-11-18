@@ -1,7 +1,7 @@
 ---
 title: "Explorando el Bot Builder SDK v4 con TDD en ASP.NET Core 2.1"
 date: 2018-11-18
-draft: true
+draft: false
 image: /posts/explorando-bot-builder-v4-tdd-aspnet-core-2.1/dominik-scythe-414905-unsplash.jpg
 credit: https://unsplash.com/photos/Sot0f3hQQ4Y
 author: "Miguel Veloso"
