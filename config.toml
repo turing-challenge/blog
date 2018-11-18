@@ -1,5 +1,14 @@
-baseURL = "https://blog.turingchallenge.com/"
+baseURL = "https://turing-blog.netlify.com/"
 languageCode = "es-es"
-title = "Turing Challenge - Blog"
+title = "turing - blog"
 
 theme = "story"
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+image = "/img/default-header-img.png"
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML", "JSON"]
