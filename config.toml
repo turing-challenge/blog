@@ -1,5 +1,6 @@
-baseURL = "https://turing-blog.netlify.com/"
+baseURL = "https://blog.turingchallenge.com/"
 languageCode = "es-es"
+author = "Turing Challenge"
 #title = ""
 
 theme = "story"
@@ -9,6 +10,9 @@ pygmentsUseClasses = true
 
 image = "/img/default-header-img.png"
 
+googleAnalytics = "UA-102023885-4"
+disqusShortname = "turing-blog"
+
 [outputs]
   home = ["HTML", "JSON", "RSS"]
-  page = ["HTML", "JSON"]
+  page = ["HTML"]
