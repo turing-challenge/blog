@@ -12,6 +12,8 @@ Vamos a usar un enfoque TDD de "alto nivel", más cercano a las pruebas de acept
 
 Este enfoque a lo mejor podría parecer poco adecuado para TDD, pero me parece que así se logra un buen balance entre lo práctico y lo efectivo.
 
+Puede conseguir el código fuente de la aplicación en [GitHub](https://github.com/turing-challenge/TodoBot).
+
 ## 1 - Introducción
 
 La versión 4 del SDK Bot Builder, se reescribió por completo, aprovechando toda la experiencia de las versiones anteriores y tiene algunos cambios importantes de arquitectura, que están muy bien recopilados y explicados en el blog post [Bot Framework V4: What I learnt in 4 days in July 2018](https://blogs.msdn.microsoft.com/martinkearn/2018/07/17/bot-framework-v4-what-i-learnt-in-4-days-in-july-2018/) de [Martin Kearn](https://blogs.msdn.microsoft.com/martinkearn/), donde se pueden revisar en detalle con links a la documentación relevante.
@@ -109,11 +111,11 @@ Al final, el archivo `TodoApp.Bot.csproj` debería quedar similar a esto:
 
 Ahora ya podemos correr el programa con `Ctrl+F5` y deberíamos ver algo como esto:
 
-![](initial-bot-view.png)
+![Vista inicial en el navegador al ejecutar un bot creado con las plantillas del SDK v4.](initial-bot-view.png)
 
 Y al abrir el archivo `BotConfiguration.bot` con el [BotEmulator V4](https://github.com/Microsoft/BotFramework-Emulator), deberíamos ver algo como esto:
 
-![](echo-bot-in-bot-emulator.png)
+![Vista del EchoBot corriendo en el emulador v4.](echo-bot-in-bot-emulator.png)
 
 **Este es un buen momento para hacer commit** (aunque seguro que no hace falta recordarlo 😉).
 
@@ -257,7 +259,7 @@ public enum TodoTaskStatus
 
 En este momento deberíamos ver el proyecto similar a esto:
 
-![](bot-app-domain-model.png)
+![Vista del Solution Explorer en Visual Studio y la estructura de la solución: Carpetas y archivos de la solución y del filesystem: - src/TodoApp (proyecto VS); - src/TodoApp/Domain; - src/TodoApp/Domain/Model; - src/TodoApp/Domain/Model/TodoTask.cs; - src/TodoApp/Domain/Model/TodoTaskStatus.cs; - src/TodoApp.Bot (proyecto VS)](bot-app-domain-model.png)
 
 ## 7 - Conceptos de TDD
 
@@ -320,11 +322,11 @@ public class TodoBot_Should
 
 Al terminar, nuestra solución se debería ver así:
 
-![](todo-bot-test-class-project-view.png)
+![Vista del Solution Explorer con el proyecto de pruebas: - test/TodoApp.Bot.UnitTests (Proyecto VS)/Scenarios/TodoBot_Should.cs](todo-bot-test-class-project-view.png)
 
 Esta forma de organizar las carpetas y nombrar las clases de prueba,  simplifica la identificación de las pruebas con la opción "Show Tests Hierarchy" del Test Explorer:
 
-![](test-explorer-view.png)
+![Vista de la jerarquía en el test explorer de VS: TodoApp.Bot.UnitTests/TodoApp.Bot.UnitTests.Scenarios/TodoBot_Should/GreetBackBayName_WhenUserGreets](test-explorer-view.png)
 
 Ahora vamos a completar nuestra primera prueba y asegurarnos que falle, porque todavía no vamos a implementar el código en el bot.
 
@@ -391,7 +393,7 @@ Ahora vamos a entrar en los detalles, línea por línea:
 
 Al ejecutar la prueba debemos obtener este resultado, que es lo esperado ahora:
 
-![](initial-test-fails.png)
+![Vista del test explorer, mostrando la primera prueba fallando.](initial-test-fails.png)
 
 Así verificamos que la prueba está funcionando correctamente, es decir, que falla cuando no se obtiene lo que esperamos. Además nos aseguramos que falle por la razón correcta y no por cualquier otro error.
 
@@ -443,7 +445,7 @@ Al menos por ahora, cuando no apliquen las condiciones de la prueba, dejamos que
 
 Y ahora verificamos que la prueba se complete con éxito:
 
-![](initial-test-passes.png)
+![Vista del test explorer, mostrando la primera prueba pasando.](initial-test-passes.png)
 
 ### 9.2 - El bot debe mostrar la ayuda después del saludo
 
@@ -478,7 +480,7 @@ public async Task DisplayHelpText_AfterGreetingBackTheUser()
 
 Igual que antes, también verificamos que falle:
 
-![](help-test-fails.png)
+![Vista del test explorer, mostrando la segunda prueba fallando.](help-test-fails.png)
 
 En este caso la falla ocurre porque se cumplió el timeout de tres segundos sin que en bot enviara nada.
 
@@ -534,7 +536,7 @@ public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancel
 
 Y verificamos que ahora sí se ejecuten las pruebas correctamente:
 
-![](help-test-passes.png)
+![Vista del test explorer, mostrando la segunda prueba pasando.](help-test-passes.png)
 
 Hacemos commit y nos preparamos para refactorizar el código común a las dos pruebas, con lo que llegamos a esto:
 
@@ -586,7 +588,7 @@ private TestFlow CreateTestFlow()
 
 Si ahora probamos nuestro bot con el Bot Emulator, deberíamos ver esto:
 
-![](help-text-in-bot-emulator.png)
+![Vista de la interacción en el emulador del bot. Muestra al bot saludando y listando los comandos](help-text-in-bot-emulator.png)
 
 Observe que en el Bot Emulator el nombre del usuario por default es **User**, por lo que el saludo es distinto del resultado de la prueba.
 
@@ -614,9 +616,9 @@ public async Task DisplayErrorMessage_WhenUnknownCommand(int test, string comman
 
 El parámetro test lo usamos solo para identificar la prueba más fácilmente en el navegador.
 
-![](error-message-fails.png)
+![Vista del test explorer, mostrando las los pruebas parametrizadas fallando, con el número de la prueba como identificador.](error-message-fails.png)
 
-No vamos a mostrar aquí la implementación porque es trivial y puede ver los detalles en el repositorio.
+No vamos a mostrar aquí la implementación porque es trivial y puede ver los detalles en el [repositorio](https://github.com/turing-challenge/TodoBot).
 
 ### 9.4 - El bot debe guardar una tarea con el comando /add
 
@@ -865,10 +867,10 @@ las partes más importantes del código anterior son:
 Al hacer esto tendremos los pasos del `WaterFall` como no definidos, pero se pueden generar rápidamente como se muestra en figura siguiente: 
 
 1. Pasos no definidos.
-2. Al usar [Ctrl+.] tendremos la opción de
+2. Al usar `Ctrl+.` tendremos la opción de
 3. Generar la declaración de los métodos
 
-![](generate-waterfall-steps.png)
+![Vista del editor de VS, mostrando los prompts de los pasos como no definidos, y las opciones para generar el código inicial para implementarlas, al usar Ctrl+.](generate-waterfall-steps.png)
 
 ##### 9.4.4.3 - Implementar los pasos del diálogo `WaterFall`
 
@@ -1012,7 +1014,7 @@ await _accessors.ConversationState.SaveChangesAsync(turnContext);
 
 Finalmente llegamos al momento de ejecutar las pruebas, con lo que deberíamos obtener los resultados que esperamos:
 
-![](successful-test-run.png)
+![Viste del test explorer mostrando todas las pruebas exitosas,](successful-test-run.png)
 
 ### 9.5 - El bot debe mostrar la lista de tareas guardadas
 
@@ -1037,7 +1039,7 @@ public async Task ListTasks_WhenListCommand()
 
 Donde podemos ver que comenzamos agregando dos tareas a la lista, en las líneas 4 y 5, que luego debemos obtener en la línea 10.
 
-La implementación de esta característica la dejaremos como tarea 😉, pero se pueden consultar los detalles en el repositorio.
+La implementación de esta característica la dejaremos como tarea 😉, pero se pueden consultar los detalles en el [repositorio](https://github.com/turing-challenge/TodoBot).
 
 ## 10 - Implementar los servicios en el bot para probar con el emulador
 
@@ -1101,7 +1103,7 @@ En el código anterior registramos al `TodoTaskTestServices` como *singleton* pa
 
 Finalmente podemos ver el resultado del tutorial:
 
-![](todo-bot-in-bot-emulator.png)
+![Vista del emulador, mostrando la interacción con el usuario: Usuario: Hi; Bot: Hi User; Bot: TO-DO commands, type /add to add a task, /list to list all tasks; User: /add; Bot: Enter the task name; User: publish bot post; Bot: What's the due date?; User: tomorrow; Bot: Added "publish bot post" due on 2018-11-19; User: /list; Bot: publish  bot post (2018-11-19).](todo-bot-in-bot-emulator.png)
 
 ## 11 - Resumen
 
