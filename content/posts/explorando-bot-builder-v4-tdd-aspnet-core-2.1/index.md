@@ -226,7 +226,40 @@ public class TodoBotAccessors
 
 Para terminar la exploración, vamos a dejar como tarea revisar la configuración del bot en `Startup.cs`.
 
-## 6 - Conceptos de TDD
+## 6 - Proyecto `TodoApp`
+
+Ya que un bot es básicamente una interfaz de usuario, vamos a crear la aplicación de back-end que soportará al bot.
+
+Entonces, vamos a crear el proyecto `TodoApp` tipo *ClassLibrary (.NET Standard)* que, por ahora, sólo va a contener nuestro modelo de dominio:
+
+### 6.1 - Clase `TodoTask`
+
+```cs
+public class TodoTask
+{
+    public DateTime? DueDate { get; set; }
+
+    public string Name { get; set; }
+
+    public TodoTaskStatus Status { get; set; }
+```
+
+### 6.2 - Clase `TodoTaskStatus`
+
+```cs
+public enum TodoTaskStatus
+{
+    Pending,
+    InProgress,
+    Finished
+}
+```
+
+En este momento deberíamos ver el proyecto similar a esto:
+
+![](bot-app-domain-model.png)
+
+## 7 - Conceptos de TDD
 
 Ahora sí comenzamos la exploración funcional del bot, haciendo una breve introducción práctica al proceso de desarrollo [Test Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development), para tratar de convertir a quienes todavía prefieren perder tiempo[^1] en el debugger 😉.
 
@@ -247,39 +280,6 @@ Además, es importante que las características se desarrollen progresivamente, 
 Por eso, nuestro primer escenario de prueba será:
 
 - **El bot debe devolver el saludo al usuario, llamándole por su nombre.**
-
-## 7 - Proyecto `TodoApp`
-
-Ya que un bot es básicamente una interfaz de usuario, vamos a crear la aplicación de back-end que soportará al bot.
-
-Entonces, vamos a crear el proyecto `TodoApp` tipo *ClassLibrary (.NET Standard)* que, por ahora, sólo va a contener nuestro modelo de dominio:
-
-### 7.1 - Clase `TodoTask`
-
-```cs
-public class TodoTask
-{
-    public DateTime? DueDate { get; set; }
-
-    public string Name { get; set; }
-
-    public TodoTaskStatus Status { get; set; }
-```
-
-### 7.2 - Clase `TodoTaskStatus`
-
-```cs
-public enum TodoTaskStatus
-{
-    Pending,
-    InProgress,
-    Finished
-}
-```
-
-En este momento deberíamos ver el proyecto similar a esto:
-
-![](bot-app-domain-model.png)
 
 ## 8 - Proyecto `TodoApp.Bot.UnitTests`
 
@@ -1113,4 +1113,4 @@ En este artículo/tutorial tuvimos oportunidad de explorar:
 - Funcionamiento básico de un bot con el Bot Builder SDK v4.
 - Funcionamiento general de los diálogos con el Bot Builder SDK v4.
 
-Espero que le resulte de utilidad.
+Espero que todo esto le resulte útil.

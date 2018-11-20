@@ -67,6 +67,11 @@
 					<a href="{{ .Site.BaseURL }}" title="Home">
 						<img src="{{ "img/logo.jpg" | absURL }}" class="w2 h2 br-100" alt="{{ .Site.Title }}" />
 					</a>
+					<span style="float:right;">
+						<a href="https://www.turingchallenge.com" >
+							<img src="{{ "img/logo-turing-header.png" | absURL }}" class="h2"/>
+						</a>
+					</span>
 					<!-- <div class="fr h2 pv2 tr">
 						{{- range .Site.Menus.main }}
 						<a class="link f5 ml2 dim near-white" href="{{ .URL }}">{{ .Name }}</a>
@@ -145,7 +150,7 @@
 			<a class="no-underline near-white" href="https://github.com/xaprb/story"><img class="dib" title="Made with Hugo and Story" alt="Story logo" src="{{ "img/story-logo-white.svg" | absURL }}" style="width: 1.5rem; height: 1.5rem" /></a>
 			</p>
 			<p class="w-50 near-white">
-				&copy; {{ now.Format "2006" }} {{ with .Site.Params.author }}{{ . }}{{ end }}
+				&copy; {{ now.Format "2006" }} <a href="https://www.turingchallenge.com" target="_blank" style="color:white">Turing Challenge</a>
 			</p>
 		</footer>
 		{{ end }}

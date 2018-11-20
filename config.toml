@@ -1,6 +1,5 @@
 baseURL = "https://blog.turingchallenge.com/"
 languageCode = "es-es"
-author = "Turing Challenge"
 #title = ""
 
 theme = "story"
@@ -16,3 +15,7 @@ disqusShortname = "turing-blog"
 [outputs]
   home = ["HTML", "JSON", "RSS"]
   page = ["HTML"]
+
+[Params]
+  author = "Turing Challenge"
+  authorUrl = "https://www.turingchallenge.com/"
