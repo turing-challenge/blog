@@ -1112,3 +1112,5 @@ En este artículo/tutorial tuvimos oportunidad de explorar:
 - Uso de mocks para pruebas unitarias.
 - Funcionamiento básico de un bot con el Bot Builder SDK v4.
 - Funcionamiento general de los diálogos con el Bot Builder SDK v4.
+
+Espero que le resulte de utilidad.

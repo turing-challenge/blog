@@ -36,3 +36,25 @@ h5 {
   font-size: 1.2rem;
 }
 
+.logo-container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dfe2e5;
+    font-size: 7em;
+    font-weight: 600;
+    margin-left: 0.2em;
+}
+
+.pb6 {
+    padding-bottom: 2em;
+}
+
+.mt5 {
+    margin-top: 2em;
+}

@@ -1,6 +1,6 @@
 baseURL = "https://turing-blog.netlify.com/"
 languageCode = "es-es"
-title = "turing - blog"
+#title = ""
 
 theme = "story"
 
