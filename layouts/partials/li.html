@@ -20,10 +20,10 @@
 							{{ .Description | markdownify }}
 							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="{{ .Permalink }}">Ver Presentación <i class="fas fa-chevron-circle-right"></i></a></p>
 						{{ else if eq .Section "talks" }}
-							{{ .Summary }}
+							{{ .Description }}
 							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="{{ .Permalink }}">Detalles de la Charla <i class="fas fa-chevron-circle-right"></i></a></p>
 						{{ else }}
-							{{ .Summary }}
+							{{ .Description }}
 							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="{{ .Permalink }}">Seguir Leyendo <i class="fas fa-chevron-circle-right"></i></a></p>
 						{{ end }}
 					</div>
