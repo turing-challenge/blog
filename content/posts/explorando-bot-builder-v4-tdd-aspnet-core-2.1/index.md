@@ -1,5 +1,6 @@
 ---
 title: "Explorando el Bot Builder SDK v4 con TDD en ASP.NET Core 2.1"
+description: Desarrollo de una aplicación tipo TO-DO List, para explorar el Bot Builder v4, usando Test Driven Development (TDD).
 date: 2018-11-18
 draft: false
 image: /posts/explorando-bot-builder-v4-tdd-aspnet-core-2.1/dominik-scythe-414905-unsplash.jpg

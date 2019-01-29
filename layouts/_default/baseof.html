@@ -51,6 +51,10 @@
 
 	</head>
 	<body class="ma0 bg-white {{ with .Section }}section-{{ . }}{{ end }} page-kind-{{ .Kind }} is-page-{{ .IsPage }} {{ with .Site.Params.classes }}{{ range . }} {{ . }}{{ end }}{{ end }}{{ with .Params.classes }}{{ range . }} {{ . }}{{ end }}{{ end }}">
+		{{ if ne (getenv "HUGO_ENV") "DEV" }}
+		{{ template "_internal/google_analytics_async.html" . }}
+		{{ end }}
+
 		{{ block "header" . }}
 		<!--
 		You can set the title and header image in the "title/image" parameters of
@@ -154,7 +158,6 @@
 			</p>
 		</footer>
 		{{ end }}
-	{{ template "_internal/google_analytics_async.html" . }}
 	{{ with .Site.Params.foot }}{{ range . }}
 	{{ . | safeHTML }}{{ end }}{{ end }}
 	</body>
