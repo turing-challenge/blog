@@ -25,6 +25,8 @@ En líneas generales el artículo contiene lo siguiente:
 4. Exploración los logs
 5. Resumen final
 
+Puedes conseguir el código fuente del artículo en [GitHub](https://github.com/turing-challenge/BotBuilderV4-Experiments-1)
+
 ## 1 - Funcionamiento del bot
 
 En líneas generales, el bot funcionará así: al comenzar la interacción, el bot buscará al usuario en un registro (por el `UserName` del canal, el Bot Emulator en este caso), para dirigirse a él/ella según haya indicado como preferencia. Si no existe, entonces le pedirá darse de alta, para tener la información necesaria.
