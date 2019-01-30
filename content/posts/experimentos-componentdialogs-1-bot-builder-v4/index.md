@@ -13,7 +13,7 @@ Cuando leí la documentación sobre la [librería de diálogos del Bot Builder v
 
 Sin embargo al ver los tutoriales y otros ejemplos que encontré, me quedé un poco decepcionado porque no vi que se usara inyección de dependencias (**DI - Dependency Injection**), sino que los diálogos se instanciaban de la peor forma, con `new` y todo lo que ello implica.
 
-Al final creo que encontré una forma interesante de manejar diálogos, sobre la que me gustaría conocer tus comentarios, al final de artículo.
+Por eso me puse a experimentar con el uso de los `ComponentDialog`. Al final creo que encontré una forma interesante de manejarlos, aunque en este artículo solo llego hasta la primera aproximación, para no hacerlo tan largo y para animarte a que me sigas por [Twitter](https://twitter.com/mvelosop) 😉. También me gustaría conocer tus comentarios en la sección al final de artículo.
 
 Voy a partir de un bot que ya funciona, con un par de escenarios de prueba, para ir refactorizándolo hasta conseguir algo que me parezca razonable como componente. No voy a pasar por todo el proceso de desarrollo, pero está basado en gran medida en el [artículo anterior](../explorando-bot-builder-v4-tdd-aspnet-core-2.1/), aunque encontrarás algunas diferencias como resultado de un mejor conocimiento del Bot Builder.
 
